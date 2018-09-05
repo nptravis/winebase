@@ -36,7 +36,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
-gem 'dotenv'
+gem 'dotenv-rails'
 
 gem 'json'
 
