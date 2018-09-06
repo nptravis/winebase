@@ -10,13 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_05_134824) do
+ActiveRecord::Schema.define(version: 2018_09_06_094005) do
 
   create_table "countries", force: :cascade do |t|
     t.string "name"
     t.string "continent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "distributers", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
   end
 
   create_table "grapes", force: :cascade do |t|
@@ -40,6 +45,7 @@ ActiveRecord::Schema.define(version: 2018_09_05_134824) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "date"
   end
 
   create_table "regions", force: :cascade do |t|
@@ -62,6 +68,11 @@ ActiveRecord::Schema.define(version: 2018_09_05_134824) do
     t.string "image_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "wine_distributer_assocs", force: :cascade do |t|
+    t.integer "wine_id"
+    t.integer "distributer_id"
   end
 
   create_table "wine_grapes", force: :cascade do |t|
@@ -88,6 +99,7 @@ ActiveRecord::Schema.define(version: 2018_09_05_134824) do
     t.string "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
   end
 
 end

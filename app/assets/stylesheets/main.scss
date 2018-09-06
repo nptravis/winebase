@@ -1,0 +1,36 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+div.header-container {
+	background-color: #b79c9e;
+	display: flex;
+	justify-content: space-between;
+	ul {
+		list-style: none;
+		li {
+			display: inline-block;
+		}
+	}
+}
+div.main-container {
+	display: flex;
+	flex-direction: row
+}
+
+div.content-container {
+	flex: 3;
+	text-align: center;
+}
+
+div.sidebar-container {
+	flex: 1;
+	height: 100%;
+	background-color: #6d6d6d;
+	ul {
+		list-style: none;
+	}
+}
